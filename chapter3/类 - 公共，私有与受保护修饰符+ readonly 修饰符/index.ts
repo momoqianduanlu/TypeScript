@@ -14,7 +14,7 @@ class Animal {
 */
 
 
-// 2. private 当成员被标记成 private 时，它就不能在声明它的类的外部访问，也不能通过子类来调用
+// 2. private 当成员被标记成 private 时，它就不能在声明它的类的外部访问，也不能通过子类来调用(不能在子类中访问)
 
 class Animal {
   private name: string
@@ -80,6 +80,7 @@ console.log(howard.getElevatorPitch())
 
 
 // 4. readonly readonly 关键字将属性设置为只读的，只读属性必须在声明时或构造函数里被初始化
+
 class Persons {
   readonly name: string
   constructor (name: string) {

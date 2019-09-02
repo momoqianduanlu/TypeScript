@@ -1,20 +1,28 @@
 // 1.布尔值
 let isDone: boolean = true
 
+
+
 // 2.数字
 let decLiteral: number = 20
 let hexLiteral: number = 0x14 //  十六进制
 let binaryLiteral: number = 0b10100 // 二进制
 let octalLiteral: number = 0o24 // 八进制
 
+
+
 // 3.字符串
 let firstName: string = 'GuoSheng'
 firstName = 'Teng'
 
+
+
 // 4.数组
 let list1: number[] = [1, 2, 3] // 表示数字类型的数组
 
-// let list2: Array<number> = [1, 2, 3] // 数组泛型的方式
+let list2: Array<number> = [1, 2, 3] // 数组泛型的方式
+
+
 
 // 5.元组
 let x: [string, number]
@@ -24,6 +32,8 @@ x = ['hello', 10]
 // x = [10, 'hello']
 
 console.log(x[0].substr(1))
+
+
 
 // 6.枚举 枚举类型呢是 javascript 标准数据类型的补充，
 enum Color {  // 注意首字母大写
@@ -40,6 +50,20 @@ let colorName:string = Color[1]
 
 console.log(colorName)
 
+// 枚举使用 enum 关键字来定义：
+enum Days {Sun, Mon, Tue, Wed, Thu, Fri, Sat}
+
+console.log(Days["Sun"] === 0) // true
+console.log(Days["Mon"] === 1) // true
+console.log(Days["Tue"] === 2) // true
+console.log(Days["Sat"] === 6) // true
+
+console.log(Days[0] === "Sun") // true
+console.log(Days[1] === "Mon") // true
+console.log(Days[2] === "Tue") // true
+console.log(Days[6] === "Sat") // true
+
+
 
 // 7. any 一旦用了 any 类型的话，typescript 就不做类型检查了
 let notSure: any = 4
@@ -52,6 +76,24 @@ let list: any[] = [1, true, 'free'] // 定义一个 any 类型的数组
 
 list[1] = 100
 
+// 7-1. 未声明类型的变量
+
+// 变量如果在声明的时候，未指定其类型，那么它会被识别为任意值类型
+let something
+
+something = 'seven'
+
+something = 7
+
+something.setName('Tom')
+
+// 等价于
+// let something: any
+// something = 'seven'
+// something = 7
+
+// something.setName('Tom')
+
 // 8. void 某种程度上可以理解成他与 any 是相反的，他表示没有任何类型
 function warnUser(): void {
   console.log('This i my warning message')
@@ -59,10 +101,14 @@ function warnUser(): void {
 
 let unUser: void = undefined // void 可以赋值成 null 和 undefined
 
+
+
 // 9. null 和 undefied
 let num: number | null = 5
 
 num = null
+
+
 
 // 10. never 表示那些永不存在的值的类型
 function error(message: string): never {
@@ -79,16 +125,20 @@ function inifiniteLoop(): never {
   }
 }
 
+
+
 // 11. object
 declare function create(o: object | null): void;
 
 create({prop: 0})
-create(null)
+// create(null)
 
 // create('string')
 // create(2)
 // create(false)
 // create(undefined)
+
+
 
 // 12. 类型断言
 let someValue: any = 'This is a string'

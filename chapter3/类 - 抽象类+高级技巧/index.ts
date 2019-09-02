@@ -31,8 +31,9 @@ class AccountingDepartment extends Department {
 }
 
 // 类 也可以作为类型
-let department: Department
+let department: Department // 允许创建一个对抽象类型的引用
 department = new AccountingDepartment()
 department.printName()
 department.printMeeting()
-// department.generateReports() // 错误: 方法在声明的抽象类中不存在
+// department.generateReports() // 错误: 方法在声明的抽象类中不存在，为什么我们不能在 new AccountingDepartment() 中调用 generateReports()？
+// 因为我们为 department 变量 声明他是 Department 类型，而在抽象类中没有定义 generateReports，所以 typescript 会认为 department.generateReports() 不存在
