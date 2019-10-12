@@ -11,4 +11,3 @@ function greeter(person) {
 }
 var user = new User('GuoSheng', 'Chen');
 console.log(greeter(user));
-

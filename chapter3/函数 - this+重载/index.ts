@@ -1,5 +1,5 @@
 let deck = {
-  suits: ['hearts', 'spades', 'clubs', 'diamonds'], // 扑克牌的花色
+  suits: ['hearts', 'spades', 'clubs', 'diamonds'], // 扑克牌的花色 红心 黑桃 草花 方片
   cards: Array(52), // 扑克牌的点数
   createCardPicker: function () {
     // return function () {

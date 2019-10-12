@@ -34,6 +34,11 @@ class Rhino extends Animal {
   constructor () {
     super('Rhino')
   }
+
+  // move 方法中不能访问父类中 private: name
+  move () {
+    // return this.name
+  }
 }
 
 class Employee {

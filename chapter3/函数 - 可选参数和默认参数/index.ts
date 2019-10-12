@@ -1,4 +1,4 @@
-// typescript里面呢他是每个参数都是必须的，也就是说传递给每个参数的个数必须与函数期望的个数是一致的
+// typescript里面呢他是每个函数参数都是必须的，也就是说传递给一个函数参数的个数必须与函数期望的个数是一致的
 
 // function buildName (firstName: string, lastName: string): string {
 //   return firstName + '' + lastName

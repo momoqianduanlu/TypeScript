@@ -58,6 +58,7 @@ class Horse extends Animal {
   constructor (name: string) {
     super(name)
   }
+  
   move (distance: number = 45) {
     console.log('Galloping...')
     super.move(distance)
